@@ -45,7 +45,8 @@ public class MainActivity extends AppCompatActivity implements PaymentResultList
                 Checkout checkout = new Checkout();
 
                 // set your id as below
-                checkout.setKeyID("rzp_live_uomKc8NxK6O1Co");
+                //Todo: place your razorpay key
+                checkout.setKeyID("Your razorpay key");
 
                 // set image
                 //checkout.setImage(R.drawable.gfgimage);
@@ -54,7 +55,7 @@ public class MainActivity extends AppCompatActivity implements PaymentResultList
                 JSONObject object = new JSONObject();
                 try {
                     // to put name
-                    object.put("name", "Nagaraj Upwor");
+                    object.put("name", "Jookate");
 
                     // put description
                     object.put("description", "Test payment");
@@ -72,7 +73,7 @@ public class MainActivity extends AppCompatActivity implements PaymentResultList
                     object.put("prefill.contact", "9876543210");
 
                     // put email
-                    object.put("prefill.email", "razorpaytest@gmail.com");
+                    object.put("prefill.email", "jookateflutter@gmail.com");
 
                     // open razorpay to checkout activity
                     checkout.open(MainActivity.this, object);
